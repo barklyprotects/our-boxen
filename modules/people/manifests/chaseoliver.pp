@@ -1,14 +1,4 @@
-class people::sccsas {
-  ##### Custom Apps #####
-  include cylent::dev_environment
-  include iterm2::dev
-  include docker
-  include spectacle
-  include gimp
-  include redis
-  include virtualbox
-  include flux
-
+class people::chaseoliver {
   include cylent::dev_environment
   include projects::portal
 
@@ -24,7 +14,8 @@ class people::sccsas {
   }
 
   class { 'osx::dock::hot_corners':
-    top_right => 'Put Display to Sleep',
+    top_right => 'Application Windows',
+    top_left  => 'Desktop',
     bottom_right => 'Start Screen Saver',
     bottom_left => 'Dashboard'
   }
