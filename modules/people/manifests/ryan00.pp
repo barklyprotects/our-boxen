@@ -1,16 +1,20 @@
 class people::ryan00 {
   include cylent::dev_environment
-  include pycharm
   include iterm2::dev
   include dropbox
   include projects::portcullis
   include docker
   include cylent::apps::ansible
+  include cylent::apps::maltrieve
   include projects::endpoint
   include projects::portal
   include projects::bamboo-docker-plugin
   include skype
   include spectacle
+
+  class {'pycharm':
+    version => '4.0.5'
+  }
 
   class { 'gpgtools': }
 
