@@ -5,6 +5,7 @@ class people::mikesplain {
 
   include projects::endpoint
   include projects::portal
+  include projects::packer
 
 
   include spectacle
@@ -48,7 +49,8 @@ class people::mikesplain {
       'rainbarf',
       'homebrew/dupes/grep',
       'reattach-to-user-namespace',
-      'mercurial'
+      'mercurial',
+      'thefuck'
     ]:
   }
 
