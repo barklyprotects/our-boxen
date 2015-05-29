@@ -1,6 +1,8 @@
 class cylent::apps::default_apps {
   notify { 'class cylent::apps::default_apps declared': }
 
+  include cylent::osx::recovery_message
+
   include chrome
   include wget
   include xquartz
@@ -34,7 +36,6 @@ class cylent::apps::default_apps {
     edition => 'ultimate',
     version => '14.0.2'
   }
-
 
   class {'vagrant':
     version => '1.7.2'
