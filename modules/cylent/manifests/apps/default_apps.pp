@@ -1,6 +1,8 @@
 class cylent::apps::default_apps {
   notify { 'class cylent::apps::default_apps declared': }
 
+  include cylent::osx::recovery_message
+
   include chrome
   include wget
   include xquartz
