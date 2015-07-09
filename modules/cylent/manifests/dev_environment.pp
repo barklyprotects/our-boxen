@@ -2,7 +2,8 @@ class cylent::dev_environment {
   notify { 'class cylent::dev_envronment declared': }
   notify { 'Repository Defaults Set': }
 
-  include cylent::apps::default_apps
+  include cylent::apps::base_apps
+  include cylent::apps::dev_apps
   include cylent::vagrant::vagrant_vmware
 
 
@@ -18,7 +19,7 @@ class cylent::dev_environment {
   git::config::global { 'core.autocrlf':
     value => 'input'
   }
-  
+
   git::config::global { 'push.default':
     value => 'simple'
   }
