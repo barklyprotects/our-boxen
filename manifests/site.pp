@@ -42,7 +42,8 @@ Repository {
   require  => File["${boxen::config::bindir}/boxen-git-credential"],
   config   => {
     'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
-  }
+  },
+  before => Notify['Repository Defaults Set']
 }
 
 Service {
@@ -57,6 +58,7 @@ node default {
   include git
   include hub
   include nginx
+  include zsh
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -68,21 +70,16 @@ node default {
   nodejs::version { '0.8': }
   nodejs::version { '0.10': }
 
+
+
+  # set the global nodejs version
+  class { 'nodejs::global': version => 'v0.10.31' }
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
-
-  # common, useful packages
-  package {
-    [
-      'ack',
-      'findutils',
-      'gnu-tar'
-    ]:
-  }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
