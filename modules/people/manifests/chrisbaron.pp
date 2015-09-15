@@ -1,6 +1,14 @@
 class people::chrisbaron {
   include cylent::dev_environment
 
+  package {
+            [
+              'adium',
+              'textmate'
+            ]: provider => 'brewcask'
+          }
+
+
   ###### Environment Settings ##########
   include osx::finder::show_all_on_desktop
   include osx::finder::empty_trash_securely
