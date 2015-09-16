@@ -15,6 +15,7 @@ class people::mikesplain {
   include flux
   include spf13vim3
   include heroku
+  include googledrive
 
   include brewcask
   homebrew::tap { 'homebrew/dupes': }
