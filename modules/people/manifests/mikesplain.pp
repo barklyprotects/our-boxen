@@ -5,6 +5,7 @@ class people::mikesplain {
 
   include projects::endpoint
   include projects::portal
+  include projects::ops
   include spectacle
   include dropbox
   include menumeters
