@@ -1,8 +1,6 @@
 class people::chaseoliver {
   include cylent::dev_environment
   include projects::portal
-  include virtualbox
-  include docker
 
   ###### Environment Settings ##########
   include osx::dock::autohide
@@ -10,17 +8,6 @@ class people::chaseoliver {
   include osx::finder::show_all_on_desktop
   include osx::finder::empty_trash_securely
   include osx::finder::show_hidden_files
-
-  class { 'osx::global::natural_mouse_scrolling':
-    enabled => false
-  }
-
-  class { 'osx::dock::hot_corners':
-    top_right => '',
-    top_left  => '',
-    bottom_right => '',
-    bottom_left => ''
-  }
 
   include cylent::osx::dock::minimize_to_application
 
