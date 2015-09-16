@@ -1,6 +1,10 @@
 class people::chaseoliver {
+  ###### Projects #######
   include cylent::dev_environment
   include projects::portal
+
+  ###### Apps ######
+  include virtualbox
 
   ###### Environment Settings ##########
   include osx::dock::autohide
