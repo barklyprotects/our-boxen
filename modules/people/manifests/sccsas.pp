@@ -8,7 +8,6 @@ class people::sccsas {
   include iterm2::dev
   include spectacle
   include gimp
-  include virtualbox
   include flux
   include onepassword
   include onepassword::chrome
