@@ -4,9 +4,10 @@ class people::rixgit {
   include dropbox
   include skype
   include spectacle
-  include projects::enonya
-
-
+  # include projects::enonya
+  include projects::endpoint
+  include cylent::apps::ansible
+  
   class { 'gpgtools': }
 
   ###### Environment Settings ##########
