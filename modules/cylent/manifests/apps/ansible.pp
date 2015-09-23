@@ -50,6 +50,10 @@ class cylent::apps::ansible {
     before => Notify['awscli']
   }
   ->
+  python::pip {'saws':
+    virtualenv => "${python::config::venv_home}/ansible"
+  }
+  ->
   python::pip {'pysphere':
     virtualenv => "${python::config::venv_home}/ansible",
   }
