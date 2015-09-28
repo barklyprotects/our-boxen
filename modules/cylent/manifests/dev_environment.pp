@@ -3,8 +3,8 @@ class cylent::dev_environment {
   notify { 'Repository Defaults Set': }
 
   include cylent::apps::default_apps
+  include cylent::apps::docker_machine
   include cylent::vagrant::vagrant_vmware
-
 
   file { $cylent_repo_dir:
     ensure => directory,
