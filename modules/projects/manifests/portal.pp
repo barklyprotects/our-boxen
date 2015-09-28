@@ -21,6 +21,11 @@ class projects::portal {
     require => File[$cylent_repo_dir]
   }
 
+  repository { "${cylent_repo_dir}/jetty-session-redis":
+    source => 'barklyprotects/jetty-session-redis',
+    require => File[$cylent_repo_dir]
+  }
+
   repository { "${cylent_repo_dir}/angalia-docker":
     source => 'barklyprotects/angalia-docker',
     require => File[$cylent_repo_dir]

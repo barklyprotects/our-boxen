@@ -26,11 +26,6 @@ class cylent::apps::default_apps {
 
   # Homebrew Packages
 
-  package { 'docker-machine':
-    ensure =>present,
-    provider => 'brewcask'
-  }
-
   package { 'vagrant':
     ensure => present,
     provider => 'brewcask'
