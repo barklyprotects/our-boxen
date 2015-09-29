@@ -14,7 +14,7 @@ class cylent::apps::docker_machine {
   }
  
   exec { 'create machine':
-    command => "/usr/local/bin/docker-machine create $machine_name --driver $docker_machine_driver --${driver}-boot2docker-url $boot2docker_url",
+    command => "/usr/local/bin/docker-machine create $machine_name --driver $docker_machine_driver --${docker_machine_driver}-boot2docker-url $boot2docker_url",
     unless => "/usr/local/bin/docker-machine inspect $machine_name",
     require => Package['docker-machine']
   }
