@@ -5,6 +5,7 @@ class cylent::apps::docker_machine {
  
   $machine_name = "osxdock"
   $docker_machine_driver = "vmwarefusion"
+  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.8.2/boot2docker.iso"
   $start_command = "/usr/local/bin/docker-machine start ${machine_name}"
 
   package { 'docker-machine':
@@ -13,7 +14,7 @@ class cylent::apps::docker_machine {
   }
  
   exec { 'create machine':
-    command => "/usr/local/bin/docker-machine create $machine_name --driver $docker_machine_driver",
+    command => "/usr/local/bin/docker-machine create $machine_name --driver $docker_machine_driver --${driver}-boot2docker-url $boot2docker_url",
     unless => "/usr/local/bin/docker-machine inspect $machine_name",
     require => Package['docker-machine']
   }
