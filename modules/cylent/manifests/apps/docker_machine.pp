@@ -30,4 +30,10 @@ class cylent::apps::docker_machine {
     content => template('cylent/docker-machine.plist.erb'),
     mode => 0400
   }
+  
+  file { "${home}/Library/LaunchAgents/com.barkly.docker-machine-env.plist":
+    ensure => file,
+    content => template('cylent/docker-machine-env.plist.erb'),
+    mode => 0400
+  }
 }
