@@ -13,3 +13,5 @@ ruby::rbenv_plugins:
   rbenv-vars:
     ensure: v1.2.0
     source: sstephenson/rbenv-vars
+
+git::version: '2.6.1'
