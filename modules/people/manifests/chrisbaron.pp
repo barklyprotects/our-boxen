@@ -8,6 +8,8 @@ class people::chrisbaron {
             ]: provider => 'brewcask'
           }
 
+  notify {'awscli':}
+
 
   ###### Environment Settings ##########
   include osx::finder::show_all_on_desktop
@@ -15,6 +17,7 @@ class people::chrisbaron {
   include osx::finder::show_hidden_files
 
   include cylent::osx::dock::minimize_to_application
+  include cylent::apps::ansible
 
   include projects::portal
 
