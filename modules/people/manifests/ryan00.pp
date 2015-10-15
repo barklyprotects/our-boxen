@@ -4,6 +4,7 @@ class people::ryan00 {
   include dropbox
   include projects::portcullis
   include cylent::apps::ansible
+  include cylent::apps::kubectl
   include projects::endpoint
   include projects::portal
   include projects::bamboo-docker-plugin
@@ -48,6 +49,8 @@ class people::ryan00 {
   package { 'pycharm':
     provider =>  'brewcask'
   }
+
+  package { 'packer': }
 
   repository { $python:
     source => 'barklyprotects/puppet-python',
