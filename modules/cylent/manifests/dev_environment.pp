@@ -18,7 +18,7 @@ class cylent::dev_environment {
   git::config::global { 'core.autocrlf':
     value => 'input'
   }
-  
+
   git::config::global { 'push.default':
     value => 'simple'
   }
@@ -30,12 +30,14 @@ class cylent::dev_environment {
   ->
   repository { "${cylent_repo_dir}/licenses":
     source => 'barklyprotects/licenses',
-    require => File[$cylent_repo_dir]
+    require => File[$cylent_repo_dir],
+    ensure   => 'origin/HEAD'
   }
   ->
   repository { $cylent_dotfiles:
     source => 'barklyprotects/dotfiles',
-    require => File[$cylent_repo_dir]
+    require => File[$cylent_repo_dir],
+    ensure   => 'origin/HEAD'
   }
 
   homebrew::tap { 'atlassian/tap': }
