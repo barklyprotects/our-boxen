@@ -1,5 +1,6 @@
 class people::de7ec7ed {
   include cylent::dev_environment
+  include cylent::apps::ansible
 
   ###### Environment Settings ##########
   include osx::dock::autohide
