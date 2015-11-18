@@ -1,12 +1,12 @@
-class cylent::apps::docker_machine {
+class cylent::apps::docker_machine (
+  $machine_name = "osxdock",
+  $docker_machine_driver = "vmwarefusion",
+  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.8.2/boot2docker.iso",
+  $start_command = "/usr/local/bin/docker-machine start ${machine_name}"
+) {
   include brewcask
 
   notify { 'class cylent::apps::docker_machine declared': }
- 
-  $machine_name = "osxdock"
-  $docker_machine_driver = "vmwarefusion"
-  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.8.2/boot2docker.iso"
-  $start_command = "/usr/local/bin/docker-machine start ${machine_name}"
 
   package { 'docker-machine':
     ensure => present,
