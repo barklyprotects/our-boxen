@@ -1,4 +1,7 @@
 class people::thomevans {
+  class { 'cylent::dev_environment':
+    docker_machine_driver => "virtualbox"   
+ }
   include cylent::dev_environment
 
   include projects::endpoint
