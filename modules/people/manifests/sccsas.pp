@@ -9,8 +9,7 @@ class people::sccsas {
   include spectacle
   include gimp
   include flux
-  include onepassword
-  include onepassword::chrome
+  include sketch
 
   ###### Environment Settings ##########
   include osx::dock::autohide
