@@ -70,10 +70,10 @@ node default {
   nodejs::version { '0.8': }
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
-  nodejs::version { '5.3.0': }
+  nodejs::version { '4.0.0': }
 
   # set the global nodejs version
-  class { 'nodejs::global': version => '5.3.0' }
+  class { 'nodejs::global': version => '4.0.0' }
 
   nodejs::nodenv::plugin { 'nodenv-vars':
     ensure => 'ee42cd9db3f3fca2a77862ae05a410947c33ba09',
