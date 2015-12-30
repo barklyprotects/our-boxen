@@ -66,8 +66,6 @@ node default {
   }
 
   # node versions
-  nodejs::version { '0.6': }
-  nodejs::version { '0.8': }
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
   nodejs::version { '4.0.0': }
@@ -76,8 +74,13 @@ node default {
   class { 'nodejs::global': version => '4.0.0' }
 
   nodejs::nodenv::plugin { 'nodenv-vars':
-    ensure => 'ee42cd9db3f3fca2a77862ae05a410947c33ba09',
+    ensure => 'aec6c972663e4277be34c61ee599f33bd9499331',
     source  => 'OiNutter/nodenv-vars'
+  }
+
+  nodejs::nodenv::plugin { 'node-build':
+    ensure => 'd409044c038f72203268479c9b0186c1b82ad2fa',
+    source  => 'OiNutter/node-build'
   }
 
   # default ruby versions

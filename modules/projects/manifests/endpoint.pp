@@ -40,15 +40,17 @@ class projects::endpoint {
     require => File[$cylent_repo_dir]
   }
 
+  $version = "4.0.0"
+
   npm_module {'coffee-script':
     module => 'coffee-script',
-    node_version => '*',
+    node_version => $version,
     version => '~> 1.7.0'
   }
 
   npm_module {'grunt-cli':
     module => 'grunt-cli',
-    node_version => '*',
+    node_version => $version,
     version => '0.1.13'
   }
 
