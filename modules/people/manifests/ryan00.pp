@@ -8,6 +8,7 @@ class people::ryan00 {
   include projects::endpoint
   include projects::portal
   include projects::bamboo-docker-plugin
+  include projects::enonya
   include skype
   include spectacle
 

@@ -6,7 +6,7 @@ class cylent::apps::kubectl {
     require => Class['wget']
   }
   ->
-  file{"${homebrew::config::installdir}/bin/kubecto":
+  file{"${homebrew::config::installdir}/bin/kubectl":
     mode => 'a+x',
   }
 }
