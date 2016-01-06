@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: Shyp/puppet-sketch
+  specs:
+    sketch (0.0.2)
+
+GITHUBTARBALL
   remote: Vodeclic/puppet-menumeters
   specs:
     menumeters (1.0.1)
@@ -77,6 +82,11 @@ GITHUBTARBALL
   remote: boxen/puppet-cmake
   specs:
     cmake (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dashlane
+  specs:
+    dashlane (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
@@ -311,15 +321,16 @@ DEPENDENCIES
   caffeine (= 1.0.0)
   chrome (= 1.2.0)
   cmake (= 1.0.1)
+  dashlane (>= 0)
   dnsmasq (= 2.0.1)
   dropbox (= 1.4.1)
   elasticsearch (= 2.9.0)
   evernote (= 2.0.7)
   firefox (= 1.2.3)
-  flux (= 1.0.1)
+  flux (>= 0)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
-  gimp (= 1.0.1)
+  gimp (>= 0)
   git (= 2.7.10)
   go (= 2.1.0)
   go (= 2.1.0)
@@ -353,6 +364,7 @@ DEPENDENCIES
   ruby (= 8.5.2)
   s3bucket (= 1.0.8)
   screenhero (= 1.0.1)
+  sketch (= 0.0.2)
   skype (= 1.1.0)
   sourcetree (= 1.0.0)
   spectacle (= 1.0.0)

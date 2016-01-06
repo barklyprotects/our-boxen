@@ -1,9 +1,13 @@
-class cylent::dev_environment {
+class cylent::dev_environment (
+  $docker_machine_driver = "vmwarefusion"
+) {
   notify { 'class cylent::dev_envronment declared': }
   notify { 'Repository Defaults Set': }
 
   include cylent::apps::default_apps
-  include cylent::apps::docker_machine
+  class { 'cylent::apps::docker_machine':
+    docker_machine_driver => $docker_machine_driver
+  }
   include cylent::vagrant::vagrant_vmware
 
   file { $cylent_repo_dir:
