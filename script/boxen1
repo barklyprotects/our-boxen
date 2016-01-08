@@ -1,0 +1,5 @@
+#!/bin/bash
+# Run Boxen.
+boxen;
+nodenv install 5.3.0;
+sed -i -e "s/0.12/5.3.0/g" /opt/boxen/nodenv/version;

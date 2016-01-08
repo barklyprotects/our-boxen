@@ -49,6 +49,11 @@ GITHUBTARBALL
     usbethdriver (1.0.0)
 
 GITHUBTARBALL
+  remote: barklyprotects/puppet-virtualbox
+  specs:
+    virtualbox (1.0.14)
+
+GITHUBTARBALL
   remote: barklyprotects/s3bucket
   specs:
     s3bucket (1.0.8)
@@ -191,7 +196,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (5.0.2)
+    nodejs (5.0.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -348,7 +353,7 @@ DEPENDENCIES
   module_data (= 0.0.4)
   mysql (= 2.1.2)
   nginx (= 1.4.6)
-  nodejs (= 5.0.2)
+  nodejs (= 5.0.5)
   office (= 1.0.9)
   onepassword (= 1.1.5)
   openssl (= 1.0.0)
@@ -375,6 +380,7 @@ DEPENDENCIES
   tmux (= 1.0.2)
   tunnelblick (= 1.0.8)
   usbethdriver (= 1.0.0)
+  virtualbox (= 1.0.14)
   vmware_fusion (= 1.2.0)
   wget (= 1.0.0)
   xquartz (= 1.2.1)
