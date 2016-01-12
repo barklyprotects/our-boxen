@@ -1,4 +1,9 @@
 class people::mikesplain {
+  class { 'cylent::dev_environment':
+    docker_machine_driver => "virtualbox"
+  }
+
+
   include cylent::dev_environment
   include python::virtualenvwrapper
   include cylent::apps::ansible
@@ -50,7 +55,8 @@ class people::mikesplain {
       'homebrew/dupes/grep',
       'reattach-to-user-namespace',
       'mercurial',
-      'ncdu'
+      'ncdu',
+      'slackcat'
     ]:
   }
 
