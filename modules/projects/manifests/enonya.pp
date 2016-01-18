@@ -1,7 +1,7 @@
 class projects::enonya {
   include python::virtualenvwrapper
 
-  notify { 'class cylent::apps::enonya declared': }
+  notify { 'class cylent::projects::enonya declared': }
 
   package {
     [

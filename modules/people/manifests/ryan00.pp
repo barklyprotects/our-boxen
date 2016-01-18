@@ -5,10 +5,12 @@ class people::ryan00 {
   include projects::portcullis
   include cylent::apps::ansible
   include cylent::apps::kubectl
+  include cylent::apps::golang
   include projects::endpoint
   include projects::portal
   include projects::bamboo-docker-plugin
   include projects::enonya
+  include projects::kukamata
   include skype
   include spectacle
 

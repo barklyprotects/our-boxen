@@ -8,7 +8,7 @@
 # heart's content.
 
 # See https://github.com/boxen/puppet-ruby for docs
-ruby::global::version: "2.2.2"
+ruby::global::version: "2.1.2"
 ruby::rbenv_plugins:
   rbenv-vars:
     ensure: v1.2.0

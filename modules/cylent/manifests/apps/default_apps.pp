@@ -53,12 +53,6 @@ class cylent::apps::default_apps {
       'tree',
       'watch',
       'git-crypt',
-      'go',
     ]:
-  }
-  ->
-  file {'/bin/git-crypt':
-    ensure => link,
-    target => "/opt/boxen/homebrew/bin/git-crypt"
   }
 }

@@ -1,0 +1,7 @@
+#!/bin/zsh
+# modifies environment for golang
+GOLANG_PATH="<%= @gopath %>"
+GOLANG_BIN_PATH="$GOLANG_PATH/bin"
+
+export GOPATH=$GOLANG_PATH
+export PATH=$PATH:$GOLANG_BIN_PATH
