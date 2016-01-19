@@ -8,7 +8,7 @@ class cylent::apps::docker_machine (
 
   notify { 'class cylent::apps::docker_machine declared': }
 
-  package { 'docker-machine':
+  package { 'dockertoolbox':
     ensure => present,
     provider => 'brewcask'
   }
@@ -16,7 +16,7 @@ class cylent::apps::docker_machine (
   exec { 'create machine':
     command => "/usr/local/bin/docker-machine --native-ssh create $machine_name --driver $docker_machine_driver --${docker_machine_driver}-boot2docker-url $boot2docker_url",
     unless => "/usr/local/bin/docker-machine inspect $machine_name",
-    require => Package['docker-machine']
+    require => Package['dockertoolbox']
   }
 
   exec { 'start machine':

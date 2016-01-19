@@ -49,6 +49,11 @@ GITHUBTARBALL
     usbethdriver (1.0.0)
 
 GITHUBTARBALL
+  remote: barklyprotects/puppet-virtualbox
+  specs:
+    virtualbox (1.0.14)
+
+GITHUBTARBALL
   remote: barklyprotects/s3bucket
   specs:
     s3bucket (1.0.8)
@@ -375,6 +380,7 @@ DEPENDENCIES
   tmux (= 1.0.2)
   tunnelblick (= 1.0.8)
   usbethdriver (= 1.0.0)
+  virtualbox (= 1.0.14)
   vmware_fusion (= 1.2.0)
   wget (= 1.0.0)
   xquartz (= 1.2.1)
