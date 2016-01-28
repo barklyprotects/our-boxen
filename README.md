@@ -53,11 +53,11 @@ If you must run boxen without enabling FileVault (which should be avoided), you 
 ### Bootstrapping
 
 Run the following commands to bootstrap your boxen environment. This only needs
-to be done once.
+to be done once.  Ensure you have accepted the XCode license agreement (run it at least once) prior to cloning the repo so you don't get prompted to do that during the next few steps.
 
 ```
 sudo mkdir -p /opt/boxen
-sudo chown -R ${USER}:staff /opt/boxen
+chown -R ${USER}:staff /opt/boxen
 sudo git clone https://github.com/barklyprotects/our-boxen.git /opt/boxen/repo
 ```
 
