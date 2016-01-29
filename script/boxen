@@ -17,7 +17,12 @@ end
 
 # Yeah yeah, I like to be explicit.
 
-at_exit { myself.flock File::LOCK_UN }
+at_exit { myself.flock File::LOCK_UN
+          exec 'nodenv install 5.3.0;
+          sed -ie "s/0.12/5.3.0/g"  /opt/boxen/nodenv/version'
+
+
+        }
 
 # Put us where we belong, in the root dir of our boxen repo.
 
