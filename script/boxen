@@ -2,6 +2,7 @@
 # Run Boxen.
 
 require "pathname"
+require_relative "../config/node_version"
 
 if ENV["USER"] == "root"
   abort "Run this as a normal user, I'll sudo if I need to."
@@ -17,7 +18,15 @@ end
 
 # Yeah yeah, I like to be explicit.
 
-at_exit { myself.flock File::LOCK_UN }
+at_exit {
+          exec "
+                echo 'Upgrading Node...'
+                cd /opt/boxen/nodenv/plugins/node-build && git pull && cd /opt/boxen/repo;
+                . ~/.profile &&
+                [[ ! -d /opt/boxen/nodenv/versions/#{UPDATE_NODE_VERSION} ]] && nodenv install #{UPDATE_NODE_VERSION};
+                nodenv global #{UPDATE_NODE_VERSION}"
+          myself.flock File::LOCK_UN
+        }
 
 # Put us where we belong, in the root dir of our boxen repo.
 
