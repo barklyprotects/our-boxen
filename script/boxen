@@ -1,4 +1,3 @@
-
 #!/usr/bin/ruby
 # Run Boxen.
 
@@ -73,12 +72,15 @@ elsif !File.directory?(".git")
 elsif current_branch.empty?
   update_failed "because your boxen checkout isn't on a branch", <<-END
     This is unusual, and will prevent me from updating in the future, too.
+
     Unless you know what you're doing, and expect to be in a "detached HEAD"
     state (which sounds quite uncomfortable!), I recommend that you do this
     to get sorted out:
+
       cd #{Dir.pwd}
       git checkout master
       boxen
+
     For serious, you probably don't want to run with a detached head.
   END
 
@@ -99,8 +101,10 @@ elsif !%x(git status --porcelain).chomp.empty?
     know that you're trying something new, and won't do things like
     automatically update, or submit issues, while you're making
     changes. It makes everyone's life a bit easier \xE2\x9D\xA4
+
     Now, if you *weren't* expecting any changes, here's how to get
     back on the golden path:
+
       cd #{Dir.pwd}
       git reset --hard origin/master
       boxen
@@ -111,6 +115,7 @@ elsif !system("git fetch --quiet origin")
     Well that's disappointing! Are you having network trouble? Is github.com
     under attack? Given the potential for all sorts of boxen-y things failing
     without the ability to pull from github, I'm going to abort for now.
+
     Check that you can hit github, see if there are any ongoing issues with
     the site and/or your network, and try again ASAP!
   END
@@ -118,9 +123,12 @@ elsif !system("git fetch --quiet origin")
 elsif %x(git rev-list --count origin/master..master).chomp != "0"
   update_failed "because you have unpushed commits on master", <<-END
     Committing directly to master? You should be ashamed!
+
     ...
+
     It's ok, you're forgiven. But you probably want to push up your changes
     soon. Even better, move them to a branch, push it and open a pull request!
+
       git checkout -b my-cool-branch
       git push -u origin my-cool-branch
       git checkout master
