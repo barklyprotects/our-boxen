@@ -21,7 +21,7 @@ class cylent::apps::default_apps {
 
   class {'intellij':
     edition => 'ultimate',
-    version => '14.1.4'
+    version => '15.0.3'
   }
 
   # Homebrew Packages
@@ -52,7 +52,7 @@ class cylent::apps::default_apps {
     ]:
   }
   ->
-  file {'/bin/git-crypt':
+  file {'/usr/local/bin/git-crypt':
     ensure => link,
     target => "/opt/boxen/homebrew/bin/git-crypt"
   }
