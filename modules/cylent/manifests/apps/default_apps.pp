@@ -51,9 +51,4 @@ class cylent::apps::default_apps {
       'go',
     ]:
   }
-  ->
-  file {'/usr/local/bin/git-crypt':
-    ensure => link,
-    target => "/opt/boxen/homebrew/bin/git-crypt"
-  }
 }
