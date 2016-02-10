@@ -34,8 +34,8 @@ class cylent::dev_environment (
   python::mkvirtualenv {'dev-tools':
     ensure => present,
     systempkgs => true,
-  } ->
-
+  } 
+  ->
   repository { "${cylent_repo_dir}/vagrantfiles":
     source => 'barklyprotects/vagrantfiles',
     require => File[$cylent_repo_dir]
