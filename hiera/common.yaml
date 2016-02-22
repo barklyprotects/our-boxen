@@ -15,3 +15,6 @@ ruby::rbenv_plugins:
     source: sstephenson/rbenv-vars
 
 git::version: '2.6.1'
+
+
+"nodejs::build::ensure": "origin/HEAD"

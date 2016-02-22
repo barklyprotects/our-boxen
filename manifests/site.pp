@@ -70,14 +70,13 @@ node default {
   nodejs::version { '0.8': }
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
-
-
+  nodejs::version { '5.3.0': }
 
   # set the global nodejs version
-  class { 'nodejs::global': version => '0.12' }
+  class { 'nodejs::global': version => '5.3.0' }
 
   nodejs::nodenv::plugin { 'nodenv-vars':
-    ensure => 'ee42cd9db3f3fca2a77862ae05a410947c33ba09',
+    ensure => 'aec6c972663e4277be34c61ee599f33bd9499331',
     source  => 'OiNutter/nodenv-vars'
   }
 
