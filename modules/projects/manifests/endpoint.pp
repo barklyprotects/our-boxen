@@ -42,13 +42,13 @@ class projects::endpoint {
 
   npm_module {'coffee-script':
     module => 'coffee-script',
-    node_version => '0.12',
-    version => '~> 1.7.0'
+    node_version => '5.3.0',
+    version => '~> 1.10.0'
   }
 
   npm_module {'grunt-cli':
     module => 'grunt-cli',
-    node_version => '0.12',
+    node_version => '5.3.0',
     version => '0.1.13'
   }
 
