@@ -2,8 +2,6 @@ class people::chrisbaron {
   class { 'cylent::dev_environment':
     docker_machine_driver => "virtualbox"   
  }
- include virtualbox
- #include cylent::dev_environment
 
   package {
             [
