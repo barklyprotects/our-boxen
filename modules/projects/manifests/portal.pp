@@ -36,4 +36,9 @@ class projects::portal {
     require => File[$cylent_repo_dir]
   }
 
+  repository { "${cylent_repo_dir}/system-test":
+    source => 'barklyprotects/system-test',
+    require => File[$cylent_repo_dir]
+  }
+
 }
