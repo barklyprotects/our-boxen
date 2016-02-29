@@ -6,7 +6,7 @@ class people::forrestwilliams {
   include cylent::apps::ansible
   include projects::endpoint
   include projects::portal
-  include projects::bamboo-docker-plugin
+  #include projects::bamboo-docker-plugin
   include skype
   include spectacle
   #include projects::enonya
