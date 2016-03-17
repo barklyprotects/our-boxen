@@ -1,10 +1,10 @@
 
 class cylent::dev_environment (
   $docker_machine_driver = "vmwarefusion"
-) 
+)
 {
   include python::virtualenvwrapper
- 
+
   notify { 'class cylent::dev_envronment declared': }
   notify { 'Repository Defaults Set': }
 
@@ -30,11 +30,15 @@ class cylent::dev_environment (
   git::config::global { 'push.default':
     value => 'simple'
   }
-  
+
+  git::config::global { 'alias.prune-branches':
+    value => '!git branch -vv | grep \'\\[origin\\/.*\\: gone\\]\' | awk \'{print $1}\' | xargs git branch -D'
+  }
+
   python::mkvirtualenv {'dev-tools':
     ensure => present,
     systempkgs => true,
-  } 
+  }
   ->
   repository { "${cylent_repo_dir}/vagrantfiles":
     source => 'barklyprotects/vagrantfiles',
@@ -60,7 +64,7 @@ class cylent::dev_environment (
   ->
   python::pip {'requests':
     name => 'requests',
-    virtualenv => "${python::config::venv_home}/dev-tools",	
+    virtualenv => "${python::config::venv_home}/dev-tools",
   }
   ->
   repository { $cylent_dotfiles:
