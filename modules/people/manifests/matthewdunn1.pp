@@ -1,8 +1,9 @@
 class people::matthewdunn1 {
   include cylent::dev_environment
-
+  include projects::endpoint
+    
   ###### Environment Settings ##########
-  include osx::dock::autohide
+  #include osx::dock::autohide
   include osx::dock::dim_hidden_apps
   include osx::finder::show_all_on_desktop
   include osx::finder::empty_trash_securely
