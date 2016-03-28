@@ -14,4 +14,7 @@ ruby::rbenv_plugins:
     ensure: v1.2.0
     source: sstephenson/rbenv-vars
 
-git::version: '2.6.1'
+git::version: '2.7.4'
+
+
+"nodejs::build::ensure": "origin/HEAD"

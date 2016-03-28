@@ -1,28 +1,23 @@
-class people::chrisbaron {
-  class { 'cylent::dev_environment':
-    docker_machine_driver => "virtualbox"   
- }
-
-  package {
-            [
-              'adium',
-              'textmate'
-            ]: provider => 'brewcask'
-          }
-
-  notify {'awscli':}
-
-
+class people::matthewdunn1 {
+  include cylent::dev_environment
+  include projects::endpoint
+    
   ###### Environment Settings ##########
+  #include osx::dock::autohide
+  include osx::dock::dim_hidden_apps
   include osx::finder::show_all_on_desktop
   include osx::finder::empty_trash_securely
   include osx::finder::show_hidden_files
+  
+
+  class { 'osx::dock::hot_corners':
+    top_right => 'Application Windows',
+    top_left  => 'Desktop',
+    bottom_right => 'Start Screen Saver',
+    bottom_left => 'Dashboard'
+  }
 
   include cylent::osx::dock::minimize_to_application
-  include cylent::apps::ansible
-
-  include projects::portal
-  include projects::endpoint
 
   ###### Set up oh-my-zsh environment ######
   repository {"${cylent_repo_dir}/oh-my-zsh":

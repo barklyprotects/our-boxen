@@ -1,6 +1,7 @@
 class projects::ops {
 
-  package { 'docker-compose':
+  package { ['docker-compose',
+             'kubernetes-cli']:
     ensure =>present
   }
 
@@ -26,6 +27,21 @@ class projects::ops {
 
   repository { "${cylent_repo_dir}/ops-docker":
     source => 'barklyprotects/ops-docker',
+    require => File[$cylent_repo_dir]
+  }
+
+  repository { "${cylent_repo_dir}/barkly-environments":
+    source => 'barklyprotects/barkly-environments',
+    require => File[$cylent_repo_dir]
+  }
+
+  repository { "${cylent_repo_dir}/barkly-kubernetes":
+    source => 'barklyprotects/barkly-kubernetes',
+    require => File[$cylent_repo_dir]
+  }
+
+  repository { "${cylent_repo_dir}/site-ops":
+    source => 'barklyprotects/site-ops',
     require => File[$cylent_repo_dir]
   }
 

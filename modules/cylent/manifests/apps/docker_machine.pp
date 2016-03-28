@@ -1,8 +1,7 @@
 class cylent::apps::docker_machine (
   $machine_name = "osxdock",
   $docker_machine_driver = "vmwarefusion",
-  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.9.1/boot2docker.iso",
-  $start_command = "/usr/local/bin/docker-machine start ${machine_name}"
+  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.9.1/boot2docker.iso"
 ) {
   include brewcask
 
@@ -20,7 +19,7 @@ class cylent::apps::docker_machine (
   }
 
   exec { 'start machine':
-    command => $start_command,
+    command => "/usr/local/bin/docker-machine start $machine_name",
     unless => "test Running = `/usr/local/bin/docker-machine status $machine_name`",
     require => Exec['create machine']
   }
