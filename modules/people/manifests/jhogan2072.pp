@@ -1,6 +1,7 @@
 class people::jhogan2072 {
   include cylent::dev_environment
   include projects::endpoint
+  include projects::portal
 
   ###### Environment Settings ##########
   include osx::dock::autohide
