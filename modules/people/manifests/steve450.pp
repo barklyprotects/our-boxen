@@ -66,11 +66,4 @@ class people::steve450 {
   }
 
   # End OSX Defaults
-
-  package {
-    [
-      'zmq',
-      'zeromq',
-    ]:
-  }
 }
