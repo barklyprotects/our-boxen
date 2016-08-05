@@ -13,6 +13,7 @@ class people::ryan00 {
   include projects::kukamata
   include skype
   include spectacle
+  include projects::enonya
 
 
   class { 'gpgtools': }

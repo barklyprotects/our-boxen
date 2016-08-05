@@ -1,17 +1,16 @@
 class people::sccsas {
   ##### Projects #####
   include cylent::dev_environment
-  include projects::portal
   include projects::endpoint
+  include projects::portal
 
   ##### Apps #####
-  include iterm2::dev
-  include spectacle
-  include gimp
-  include virtualbox
+  include dashlane
   include flux
-  include onepassword
-  include onepassword::chrome
+  include gimp
+  include iterm2::dev
+  include sketch
+  include spectacle
 
   ###### Environment Settings ##########
   include osx::dock::autohide

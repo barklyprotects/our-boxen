@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: Shyp/puppet-sketch
+  specs:
+    sketch (0.0.2)
+
+GITHUBTARBALL
   remote: Vodeclic/puppet-menumeters
   specs:
     menumeters (1.0.1)
@@ -44,6 +49,11 @@ GITHUBTARBALL
     usbethdriver (1.0.0)
 
 GITHUBTARBALL
+  remote: barklyprotects/puppet-virtualbox
+  specs:
+    virtualbox (1.0.14)
+
+GITHUBTARBALL
   remote: barklyprotects/s3bucket
   specs:
     s3bucket (1.0.8)
@@ -77,6 +87,11 @@ GITHUBTARBALL
   remote: boxen/puppet-cmake
   specs:
     cmake (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dashlane
+  specs:
+    dashlane (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
@@ -126,7 +141,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.7.92)
+    git (2.7.10)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -181,7 +196,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (5.0.2)
+    nodejs (5.0.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -311,16 +326,17 @@ DEPENDENCIES
   caffeine (= 1.0.0)
   chrome (= 1.2.0)
   cmake (= 1.0.1)
+  dashlane (>= 0)
   dnsmasq (= 2.0.1)
   dropbox (= 1.4.1)
   elasticsearch (= 2.9.0)
   evernote (= 2.0.7)
   firefox (= 1.2.3)
-  flux (= 1.0.1)
+  flux (>= 0)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
-  gimp (= 1.0.1)
-  git (= 2.7.92)
+  gimp (>= 0)
+  git (= 2.7.10)
   go (= 2.1.0)
   go (= 2.1.0)
   googledrive (= 1.0.2)
@@ -337,7 +353,7 @@ DEPENDENCIES
   module_data (= 0.0.4)
   mysql (= 2.1.2)
   nginx (= 1.4.6)
-  nodejs (= 5.0.2)
+  nodejs (= 5.0.5)
   office (= 1.0.9)
   onepassword (= 1.1.5)
   openssl (= 1.0.0)
@@ -353,6 +369,7 @@ DEPENDENCIES
   ruby (= 8.5.2)
   s3bucket (= 1.0.8)
   screenhero (= 1.0.1)
+  sketch (= 0.0.2)
   skype (= 1.1.0)
   sourcetree (= 1.0.0)
   spectacle (= 1.0.0)
@@ -363,6 +380,7 @@ DEPENDENCIES
   tmux (= 1.0.2)
   tunnelblick (= 1.0.8)
   usbethdriver (= 1.0.0)
+  virtualbox (= 1.0.14)
   vmware_fusion (= 1.2.0)
   wget (= 1.0.0)
   xquartz (= 1.2.1)

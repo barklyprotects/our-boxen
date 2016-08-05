@@ -1,16 +1,28 @@
-class people::chaseoliver {
-  ###### Projects #######
-  include cylent::dev_environment
+class people::andrewpopeo {
+
+  class { 'cylent::dev_environment':
+    docker_machine_driver => "virtualbox"
+  }
+
   include projects::portal
+  include projects::endpoint
+  include virtualbox
 
   ###### Environment Settings ##########
-  include osx::dock::autohide
-  include osx::dock::dim_hidden_apps
-  include osx::finder::show_all_on_desktop
+  include osx::global::enable_keyboard_control_access
+  include osx::global::disable_autocorrect
+  include osx::global::tap_to_click
   include osx::finder::empty_trash_securely
-  include osx::finder::show_hidden_files
+  include osx::finder::show_all_filename_extensions
+  include osx::safari::enable_developer_mode
 
-  include cylent::osx::dock::minimize_to_application
+  class { 'osx::global::natural_mouse_scrolling':
+    enabled => false
+  }
+
+  class { 'cylent::osx::dock::autohide':
+    enabled => false
+  }
 
   ###### Set up oh-my-zsh environment ######
   repository {"${cylent_repo_dir}/oh-my-zsh":
@@ -35,4 +47,5 @@ class people::chaseoliver {
     path => ["/usr/bin","/bin"],
     onlyif => "bash -c test `dscl . -read /Users/${USER} UserShell | cut -d: -f2 | tr -d ' '` = /opt/boxen/homebrew/bin/zsh"
   }
+
 }

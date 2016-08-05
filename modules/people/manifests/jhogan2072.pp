@@ -1,7 +1,6 @@
-class people::chaseoliver {
-  ###### Projects #######
+class people::jhogan2072 {
   include cylent::dev_environment
-  include projects::portal
+  include projects::endpoint
 
   ###### Environment Settings ##########
   include osx::dock::autohide
@@ -9,6 +8,14 @@ class people::chaseoliver {
   include osx::finder::show_all_on_desktop
   include osx::finder::empty_trash_securely
   include osx::finder::show_hidden_files
+
+
+  class { 'osx::dock::hot_corners':
+    top_right => 'Application Windows',
+    top_left  => 'Desktop',
+    bottom_right => 'Start Screen Saver',
+    bottom_left => 'Dashboard'
+  }
 
   include cylent::osx::dock::minimize_to_application
 
