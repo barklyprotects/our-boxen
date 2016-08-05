@@ -161,7 +161,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (2.0.0)
+    homebrew (2.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -342,7 +342,7 @@ DEPENDENCIES
   googledrive (= 1.0.2)
   gpgtools (= 1.0.4)
   heroku (= 2.1.1)
-  homebrew (= 2.0.0)
+  homebrew (= 2.0.2)
   hub (= 1.4.1)
   inifile (= 1.4.2)
   intellij (= 1.5.1)

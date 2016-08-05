@@ -22,6 +22,8 @@ class people::chrisbaron {
   include cylent::apps::ansible
 
   include projects::portal
+  include projects::endpoint
+  include projects::ops
 
   ###### Set up oh-my-zsh environment ######
   repository {"${cylent_repo_dir}/oh-my-zsh":
