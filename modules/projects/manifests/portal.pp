@@ -41,4 +41,8 @@ class projects::portal {
     require => File[$cylent_repo_dir]
   }
 
+  repository { "${cylent_repo_dir}/recurly-java-library":
+    source => 'barklyprotects/recurly-java-library',
+    require => File[$cylent_repo_dir]
+  }
 }
