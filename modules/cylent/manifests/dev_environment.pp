@@ -73,6 +73,12 @@ class cylent::dev_environment (
     ensure   => 'origin/HEAD'
   }
 
+  repository { "${cylent_repo_dir}/api-keys":
+    source => 'barklyprotects/api-keys',
+    require => File[$cylent_repo_dir],
+    ensure   => 'origin/HEAD'
+  }
+
   homebrew::tap { 'atlassian/tap': }
 
   package { "atlassian/tap/atlassian-plugin-sdk":
