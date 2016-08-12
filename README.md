@@ -1,4 +1,4 @@
-# Our Boxen
+ # Our Boxen
 
 This is CYLENT System's Boxen project, created from Github's Boxen template
 project: https://github.com/boxen/our-boxen
@@ -29,7 +29,7 @@ and detect most of these and tell you anyway):
 
 ### Dependencies
 
-#### Install Xcode
+**Install the Xcode Command Line Tools and/or full Xcode.**
 This will grant you the most predictable behavior in building apps like
 MacVim.
 
