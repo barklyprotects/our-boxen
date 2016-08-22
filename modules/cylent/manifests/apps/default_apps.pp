@@ -49,6 +49,7 @@ class cylent::apps::default_apps {
       'watch',
       'git-crypt',
       'go',
+      'gpg',
     ]:
   }
 }

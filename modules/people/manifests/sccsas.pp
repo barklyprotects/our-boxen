@@ -11,6 +11,7 @@ class people::sccsas {
   include iterm2::dev
   include sketch
   include spectacle
+  include usbethdriver
 
   ###### Environment Settings ##########
   include osx::dock::autohide
