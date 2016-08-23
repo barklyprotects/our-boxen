@@ -1,4 +1,4 @@
-class people::default {
+class people::alanyang3 {
   include cylent::dev_environment
 
   ###### Environment Settings ##########
