@@ -20,6 +20,11 @@ class people::sccsas {
   include osx::finder::empty_trash_securely
   include osx::finder::show_hidden_files
 
+  include dnsmasq
+  dnsmasq::address { 'angalia-web-portal-functional-tests':
+    ipaddr => '172.16.132.128'
+  }
+
   class { 'osx::global::natural_mouse_scrolling':
     enabled => false
   }
