@@ -1,7 +1,7 @@
 class cylent::apps::docker_machine (
   $machine_name = "osxdock",
   $docker_machine_driver = "vmwarefusion",
-  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.11.1/boot2docker.iso"
+  $boot2docker_url = "https://github.com/boot2docker/boot2docker/releases/download/v1.12.0/boot2docker.iso"
 ) {
   include brewcask
 
