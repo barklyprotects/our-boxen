@@ -1,5 +1,7 @@
 class people::alanyang3 {
-  include cylent::dev_environment
+  class { 'cylent::dev_environment':
+    docker_machine_driver => "virtualbox"   
+ }
 
   ###### Environment Settings ##########
   include osx::dock::autohide
@@ -9,6 +11,7 @@ class people::alanyang3 {
   include osx::finder::show_hidden_files
 
   include projects::portal
+  include projects::endpoint
 
   class { 'osx::dock::hot_corners':
     top_right => 'Application Windows',
@@ -18,5 +21,28 @@ class people::alanyang3 {
   }
 
   include cylent::osx::dock::minimize_to_application
+  ###### Set up oh-my-zsh environment ######
+  repository {"${cylent_repo_dir}/oh-my-zsh":
+    source => 'robbyrussell/oh-my-zsh',
+    require => File[$cylent_repo_dir]
+  }
+
+  file {"${home}/.zshrc":
+    ensure  => link,
+    target => "${cylent_dotfiles}/zshrc",
+    require => Repository["${cylent_repo_dir}/oh-my-zsh"]
+  }
+
+  file {"${cylent_env}/zsh":
+    ensure => link,
+    target => "${cylent_dotfiles}/zsh",
+    require => [Repository[$cylent_dotfiles],File[$cylent_env]]
+  }
+  ->
+  exec { "chsh -s /opt/boxen/homebrew/bin/zsh":
+    user => root,
+    path => ["/usr/bin","/bin"],
+    onlyif => "bash -c test `dscl . -read /Users/${USER} UserShell | cut -d: -f2 | tr -d ' '` = /opt/boxen/homebrew/bin/zsh"
+  }
 
 }
