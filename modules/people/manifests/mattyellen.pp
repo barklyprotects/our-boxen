@@ -8,6 +8,8 @@ class people::mattyellen {
   include osx::finder::empty_trash_securely
   include osx::finder::show_hidden_files
 
+  include projects::portal
+  include projects::endpoint
 
   class { 'osx::dock::hot_corners':
     top_right => 'Application Windows',
