@@ -57,8 +57,8 @@ to be done once.  Ensure you have accepted the XCode license agreement (run it a
 
 ```
 sudo mkdir -p /opt/boxen
-chown -R ${USER}:staff /opt/boxen
 sudo git clone https://github.com/barklyprotects/our-boxen.git /opt/boxen/repo
+chown -R ${USER}:staff /opt/boxen
 ```
 
 Next, create your user-specific boxen file from the default:
