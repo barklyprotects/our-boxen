@@ -28,7 +28,7 @@ class people::rixgit {
   include cylent::osx::dock::minimize_to_application
 
   ####### personal repositories #######
-  #  $python     = "${cylent_repo_dir}/puppet-python"
+  $python     = "${cylent_repo_dir}/puppet-python"
   $crypto_keys = "${home}/keys"
 
   file {$crypto_keys:
@@ -43,10 +43,10 @@ class people::rixgit {
     provider =>  'brewcask'
   }
 
-  #repository { $python:
-  #  source => 'barklyprotects/puppet-python',
-  #  require => File[$cylent_repo_dir]
-  #}
+  repository { $python:
+    source => 'barklyprotects/puppet-python',
+    require => File[$cylent_repo_dir]
+  }
 
   repository {"${cylent_repo_dir}/oh-my-zsh":
     source => 'robbyrussell/oh-my-zsh',
