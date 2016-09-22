@@ -12,7 +12,6 @@ class people::alanyang3 {
 
   include projects::portal
   include projects::endpoint
-  include projects::upgrader
 
   class { 'osx::dock::hot_corners':
     top_right => 'Application Windows',
