@@ -13,17 +13,17 @@ class projects::endpoint {
   repository { "${cylent_repo_dir}/RV-Loaders":
     source => 'barklyprotects/RV-Loaders',
     require => File[$cylent_repo_dir]
-  } 
+  }
 
   repository { "${cylent_repo_dir}/RV-Shared":
     source => 'barklyprotects/RV-Shared',
     require => File[$cylent_repo_dir]
-  } 
+  }
 
   repository { "${cylent_repo_dir}/RV-Tools":
     source => 'barklyprotects/RV-Tools',
     require => File[$cylent_repo_dir]
-  } 
+  }
 
   repository { "${cylent_repo_dir}/bandit":
     source => 'barklyprotects/bandit',
@@ -47,6 +47,11 @@ class projects::endpoint {
 
   repository { "${cylent_repo_dir}/upgrader":
     source => 'barklyprotects/upgrader',
+    require => File[$cylent_repo_dir]
+  }
+
+  repository { "${cylent_repo_dir}/winsw":
+    source => 'barklyprotects/winsw',
     require => File[$cylent_repo_dir]
   }
 
