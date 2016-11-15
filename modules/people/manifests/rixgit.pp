@@ -1,4 +1,4 @@
-class people::default {
+class people::rixgit {
   include cylent::dev_environment
   include cylent::dev_environment
 
