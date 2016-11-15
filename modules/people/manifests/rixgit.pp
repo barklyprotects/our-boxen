@@ -6,11 +6,11 @@ class people::default {
   include projects::beam
 
   ###### Environment Settings ##########
-  include osx::dock::autohide
-  include osx::dock::dim_hidden_apps
-  include osx::finder::show_all_on_desktop
-  include osx::finder::empty_trash_securely
-  include osx::finder::show_hidden_files
+  #include osx::dock::autohide
+  #include osx::dock::dim_hidden_apps
+  #include osx::finder::show_all_on_desktop
+  #include osx::finder::empty_trash_securely
+  #include osx::finder::show_hidden_files
 
 
   #class { 'osx::dock::hot_corners':
@@ -20,7 +20,7 @@ class people::default {
   #  bottom_left => 'Dashboard'
   #}
 
-  include cylent::osx::dock::minimize_to_application
+  #include cylent::osx::dock::minimize_to_application
 
   ###### Set up oh-my-zsh environment ######
   repository {"${cylent_repo_dir}/oh-my-zsh":
