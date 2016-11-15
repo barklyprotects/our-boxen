@@ -4,6 +4,7 @@ class people::rixgit {
   include dropbox
   include skype
   include spectacle
+  include projects::beam
   # include projects::enonya
   include projects::endpoint
   include cylent::apps::ansible
