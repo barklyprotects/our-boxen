@@ -13,7 +13,6 @@ class people::mikesplain {
   include projects::ops
   include spectacle
   include dropbox
-  include menumeters
   include sourcetree
   include tmux
   include caffeine
