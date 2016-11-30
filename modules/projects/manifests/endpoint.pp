@@ -54,6 +54,11 @@ class projects::endpoint {
     source => 'barklyprotects/winsw',
     require => File[$cylent_repo_dir]
   }
+  
+  repository { "${cylent_repo_dir}/athena":
+    source => 'barklyprotects/athena',
+    require => File[$cylent_repo_dir]
+  }
 
   npm_module {'coffee-script':
     module => 'coffee-script',
