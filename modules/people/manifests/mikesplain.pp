@@ -27,7 +27,6 @@ class people::mikesplain {
             [
               '1password',
               'alfred',
-              'atom',
               'cakebrew',
               'camtwist',
               'charles',
