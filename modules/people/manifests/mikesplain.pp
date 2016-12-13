@@ -11,7 +11,6 @@ class people::mikesplain {
   include projects::endpoint
   include projects::portal
   include projects::ops
-  include spectacle
   include dropbox
   include sourcetree
   include tmux
@@ -32,18 +31,17 @@ class people::mikesplain {
               'charles',
               'cyberduck',
               'evernote',
-              'flash',
               'launchrocket',
               'thunderbird',
               'gpgtools',
               'menumeters',
-              'mou',
               'sequel-pro',
               'slack',
               'spotify',
               'torbrowser',
               'vlc',
-              'psequel'
+              'psequel',
+              'spectacle'
               #'ccmenu',
               #'kaleidoscope',
             ]: provider => 'brewcask'
