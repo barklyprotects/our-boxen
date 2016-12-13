@@ -37,7 +37,6 @@ class people::mikesplain {
               'evernote',
               'firefox',
               'gimp',
-              'github-desktop',
               'go',
               'gpgtools',
               'helm',
