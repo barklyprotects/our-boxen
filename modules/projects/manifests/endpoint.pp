@@ -60,6 +60,11 @@ class projects::endpoint {
     require => File[$cylent_repo_dir]
   }
 
+repository { "${cylent_repo_dir}/RV-OSMonitor":
+    source => 'barklyprotects/RV-OSMonitor',
+    require => File[$cylent_repo_dir]
+  }
+
   npm_module {'coffee-script':
     module => 'coffee-script',
     node_version => '5.3.0',
