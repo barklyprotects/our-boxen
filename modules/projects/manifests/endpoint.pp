@@ -55,7 +55,12 @@ class projects::endpoint {
     require => File[$cylent_repo_dir]
   }
   
-  repository { "${cylent_repo_dir}/RV-OSMonitor":
+  repository { "${cylent_repo_dir}/athena":
+    source => 'barklyprotects/athena',
+    require => File[$cylent_repo_dir]
+  }
+
+repository { "${cylent_repo_dir}/RV-OSMonitor":
     source => 'barklyprotects/RV-OSMonitor',
     require => File[$cylent_repo_dir]
   }
