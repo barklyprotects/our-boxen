@@ -14,6 +14,7 @@ class people::ryan00 {
   include skype
   include spectacle
   include projects::enonya
+  include terraform
 
 
   class { 'gpgtools': }
